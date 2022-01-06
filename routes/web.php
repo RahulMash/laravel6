@@ -21,9 +21,6 @@
     // Route::view('company','company');
     // Route::get('company-show','TestController@show');
 
-// });  
-// Route::resource('ajax','AjaxController');
-// Route::get('fetch-students','AjaxController@fetchstudent');
-// Route::post('form_submit','AjaxController@store');
+
 
 Route::resource('ajax-crud','AjaxesCrudController');
