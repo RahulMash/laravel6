@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Ajax;
 class AjaxesCrudController extends Controller
 {
     /**
@@ -34,7 +34,13 @@ class AjaxesCrudController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ajax = Ajax::updateOrCreate(
+            ['id'=>$request->id],
+            ['name'=>$request->name],
+            ['email'=>$request->email]
+        );
+
+        return response()->json($ajax);
     }
 
     /**

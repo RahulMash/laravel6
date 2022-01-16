@@ -16,11 +16,5 @@
         return view('welcome');
     });
     
-    // Route::get('test','TestController@index')->name('tested');
-    // Route::view('user','users');
-    // Route::view('company','company');
-    // Route::get('company-show','TestController@show');
-
-
-
-Route::resource('ajax-crud','AjaxesCrudController');
+   Route::get('ajax','AjaxCrudController@index');
+   Route::post('/ajaxadd','AjaxCrudController@store');
