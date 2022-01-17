@@ -247,9 +247,9 @@
                     type: "DELETE",
                     url : "/delete-ajax/"+ajax_id,
                     success : function(response){
-                        // console.log(response);
-                        // $('#success_message').addClass("alert alert-danger");
-                        // $('$success_message').html(response.message);
+                        console.log(response);
+                        $('#success_message').addClass("alert alert-danger");
+                        $('#success_message').html(response.message);
                         $('#deleteStudentModal').modal('hide');
                         fetchajax();
                     }
@@ -332,7 +332,8 @@
                     {
                         $('#updatefrom_errorList').html("");
                         $('#updatefrom_errorList').addClass("alert alert-danger");
-                        $.each(response.errors, function (key, err_values) {
+                        // console.log(response.message);
+                        $.each(response.message, function (key, err_values) {
                             
                             $('#updatefrom_errorList').append('<li>'+err_values+'</li>');
                         });
