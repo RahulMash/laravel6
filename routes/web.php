@@ -17,4 +17,8 @@
     });
     
    Route::get('ajax','AjaxCrudController@index');
+   Route::get('fetch-ajax','AjaxCrudController@fetchajax');
    Route::post('/ajaxadd','AjaxCrudController@store');
+   Route::get('edit-ajax/{id}','AjaxCrudController@edit');
+   Route::put('/update-ajax/{id}','AjaxCrudController@update');
+   Route::delete('delete-ajax/{id}','AjaxCrudController@delete');
