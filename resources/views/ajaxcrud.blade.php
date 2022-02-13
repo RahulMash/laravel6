@@ -27,6 +27,7 @@
             </div>
             <div class="modal-body">
                 <form id="addform">
+                <ul id="updatefrom_errorList"></ul>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
                         <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter name">
@@ -189,11 +190,38 @@
                     url: "/ajaxadd",
                     data: $("form").serialize(),
                     success: function(response) {
-                        // console.log(response)
+                        
+                        // $("#addform").trigger('reset');
+                        // $("#ajaxaddmodel").modal("hide");
+                        // fetchajax();
+                        // alert("data  saved");
+
+                    if(response.status == 400)
+                    {    //console.log(response.message)
+                        $('#updatefrom_errorList').html("");
+                        $('#updatefrom_errorList').addClass("alert alert-danger");
+                        // console.log(response.message);
+                        $.each(response.message, function (key, err_values) {
+                            
+                            $('#updatefrom_errorList').append('<li>'+err_values+'</li>');
+                        });
+
+                    }
+                    else if(response.status == 404)
+                    {
+                        $('#updatefrom_errorList').html("");
+                        $('#success_message').addClass("alert alert-danger");
+                        $('#success_message').html("");
+                    }
+                    else{
+                        $('#updatefrom_errorList').html("");
+                        $('#success_message').html("");
+                        $('#success_message').addClass("alert alert-danger");
+                        $('#success_message').text(response.message);
                         $("#addform").trigger('reset');
                         $("#ajaxaddmodel").modal("hide");
                         fetchajax();
-                        alert("data  saved");
+                    }
                     },
                     error: function(error)
                     {

@@ -82,18 +82,66 @@ class AjaxCrudController extends Controller
                     'message'=>'Data not found',
                 ]);
             }
-                
-                
-           
         }
     }
 
     public function store(Request $request){
         // dd($request);
-       $ajax = new Ajax();
-       $ajax->name = $request->input('name');
-       $ajax->email = $request->input('email');
-       $ajax->save();
+        $validator = Validator::make($request->all(),[
+            'name'=>'required|max:50',
+            'email'=>'required|max:50',
+        ],[
+            'name.required'=>'Name is requklh,hnl,ired',
+            'email.required'=>'Email is required',
+        ]);
+
+        if($validator->fails())
+        {
+            return response()->json([
+                'status'=>400,
+                'message'=>$validator->messages(),
+            ]);
+        }
+        else
+        {   
+            $ajax = new Ajax();
+            $ajax->name = $request->input('name');
+            $ajax->email = $request->input('email');
+            $ajax->save();
+            
+            if($ajax)
+            {
+                
+                return response()->json([
+                    'status'=>200,
+                    'message'=>'Data Saved',
+                ]);
+            }
+            else
+            {
+                return response()->json([
+                    'status'=>404,
+                    'message'=>'Data not found',
+                ]);
+            }
+        }
+
+      
+
+    //    if($ajax)
+    //    {
+    //         return response()->json([
+    //             'status'=>200,
+    //             'message'=>'Data Saved'
+    //         ]);
+    //    }
+    //    else
+    //    {
+    //     return response()->json([
+    //         'status'=>404,
+    //         'message'=>'Data not Saved'
+    //     ]);
+    //    }
     }
 
     public function delete($id)

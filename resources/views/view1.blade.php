@@ -1,2 +1,11 @@
-<h2>this is view 1</h2>
-@include('view2')
+@extends('layout');
+@section('title1','view1')
+
+@section('header')
+@parent
+@endsection
+
+
+@section('footer')
+@parent
+@endsection
