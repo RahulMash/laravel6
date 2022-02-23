@@ -63,4 +63,18 @@ Route::get('/search','SearchController@index');
 Route::post('/search_result','SearchController@search_result'); 
 // 
 
+// test map api
+Route::view('coordinate','coordinate');
+// 
+
+// 
+Route::view('bold','bold-searched');
+// 
+
+// 
+Route::view('header','header-sidebar.header');
+Route::view('header2','header-sidebar.dropdown-button');
+Route::view('side','header-sidebar.side-bar');
+// 
+
 

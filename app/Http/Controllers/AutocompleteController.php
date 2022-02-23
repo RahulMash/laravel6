@@ -23,6 +23,7 @@ class AutocompleteController extends Controller
       $data = DB::table('apps_countries')
         ->where('country_name', 'LIKE', "%{$query}%")
         ->get();
+        // dd(gettype($data));
       $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
       foreach($data as $row)
       { 
