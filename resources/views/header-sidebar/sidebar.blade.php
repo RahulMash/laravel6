@@ -1,5 +1,5 @@
 <nav id="sidebar">
-            <div class="p-4 pt-5 ml-2">
+            <div class="p-4  ml-2">
               <ul class="list-unstyled components mb-5">
                 <li class="active">
                   <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>

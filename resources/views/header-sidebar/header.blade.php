@@ -40,7 +40,7 @@ background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 </head>
 
 <body>
-	<nav class=" navbar navbar-expand-lg shadow-sm p-3 mb-5 bg-white navbar-default navbar-static-top py-lg-0 ">
+	<nav class=" navbar navbar-expand-lg shadow-sm p-3 mb-5 bg-white fixed-top  py-lg-0 ">
 		<a class="navbar-brand " href="#">
 			<!-- Add logo with size of 90*80 -->
 			<img src="asset/img/logo-small.png" width="100" height="50" alt="">
