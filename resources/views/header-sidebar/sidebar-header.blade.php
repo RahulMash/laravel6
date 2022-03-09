@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg shadow-sm   bg-white fixed-top">
     <a class="navbar-brand " href="#">
-			<img src="asset/img/logo-small.png" width="100" height="50" alt="">
+			<img src="assets/img/logo-small.png" width="100" height="50" alt="">
 		</a>
         
         <button class="navbar-toggler border border-danger" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="asset/img/usr.jpeg" width="40" height="40" class="rounded-circle">
+                        <img src="assets/img/usr.jpeg" width="40" height="40" class="rounded-circle">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Dashboard</a>

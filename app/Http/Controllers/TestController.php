@@ -8,10 +8,13 @@ class TestController extends Controller
 {
     //
     public function index(){
-        dd(123);
+        test();
+        
     }
 
     public function show(){
         return redirect()->route('tested');
     }
+
+    
 }

@@ -15,8 +15,8 @@
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::view("layout","layout");
-    Route::view("view1","view1");
+    Route::view("view2","laravel-temp.view2");
+    Route::view("view1","laravel-temp.view1");
 
     // ajax code
    Route::get('ajax','AjaxCrudController@index');
@@ -75,6 +75,16 @@ Route::view('bold','bold-searched');
 Route::view('header','header-sidebar.header');
 Route::view('header2','header-sidebar.dropdown-button');
 Route::view('side','header-sidebar.side-bar');
+Route::view('content','header-sidebar.content');
+Route::view('content2','header-sidebar.content2');
+Route::view('table','header-sidebar.table');
+Route::view('form','header-sidebar.form-ui');
+
+//
+
+// helper testing
+Route::get('test','TestController@index');
+
 // 
 
 
