@@ -35,7 +35,7 @@ class AutocompleteController extends Controller
       echo $output;
      }
      else{
-         return redirect('kkk');
+         return redirect('kkkss');
      }
     }
 
