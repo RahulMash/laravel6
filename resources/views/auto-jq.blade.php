@@ -97,7 +97,8 @@ function autocomplete(inp, arr) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
+  inp.addEventListener("input", function(e)
+  {
       var a, b, i, val = this.value;
       /*close any already open lists of autocompleted values*/
       closeAllLists();
@@ -196,24 +197,24 @@ function autocomplete(inp, arr) {
 autocomplete(document.getElementById("myInput"), countries); 
 
 
-$(function() {
-    $("#myInput").autocomplete({
-        // source: countries,
-        response: function(event, ui) {
-            if (ui.content.length === 0) {
-                // $("#exampleModal").modal('show');
-                alert(123);
-            } else {
-                $("#empty-message").empty();
-            }
-        }
-    });
+// $(function() {
+//     $("#myInput").autocomplete({
+//         // source: countries,
+//         response: function(event, ui) {
+//             if (ui.content.length === 0) {
+//                 // $("#exampleModal").modal('show');
+//                 alert(123);
+//             } else {
+//                 $("#empty-message").empty();
+//             }
+//         }
+//     });
 
-    $('#addSchoolBtn').on('click',function(){
-        // alert(123);
-        $("#exampleModal").modal('hide');
-    });
-});
+//     $('#addSchoolBtn').on('click',function(){
+//         // alert(123);
+//         $("#exampleModal").modal('hide');
+//     });
+// });
 </script>
 
 </body>
