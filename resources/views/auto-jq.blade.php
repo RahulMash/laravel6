@@ -75,7 +75,7 @@ input[type=submit] {
 <h2>Autocomplete</h2>
 
 <p>Start typing:</p>
-
+<h3>test checkout</h3>
 <!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off" action="/action_page.php">
   <div class="autocomplete" style="width:300px;">
