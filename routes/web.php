@@ -1,5 +1,6 @@
 <?php
-
+use illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -87,4 +88,42 @@ Route::get('test','TestController@index');
 
 // 
 
+// email mailtrap
+Route::get('mail', function()
+{
+    $data = ['name'=>'the test coder'];
+    Mail::send('mail',$data , function ($msg){
+        $msg->to('rahulpay006@gmail.com','Adavnce laravel feature')
+            ->subject("Advance laravel Series");
+    });
+    echo "Mail Sent";
+});
+// 
 
+// send email via gmail
+
+Route::get('sendbasicemail','MailController@basic_email');
+Route::get('sendhtmlemail','MailController@html_email');
+Route::get('sendattachmentemail','MailController@attachment_email');
+
+// 
+
+
+// test markdown
+    // use App\Mail\SampleMail;
+    // Route::get('markdown', function(){
+    //     return new SampleMail();
+    // });
+// 
+
+// simple mail without smtp
+// Route::get('simple-mail', function(){
+//     return Mail::to('rahulvermat006@gmail.com')->send('mail','text');
+// });
+// 
+
+Route::view('wel-come','welcome')->name('jj');
+
+// DOM PDF Start
+Route::get('generate-pdf','PDFController@generatePDF');
+// DOM PDF End
